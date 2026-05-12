@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowLeft, Clock, Calendar, ArrowRight } from "lucide-react";
 
 const posts: Record<string, { title: string; category: string; date: string; readTime: string; content: string[] }> = {
@@ -52,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) {
     return (
-      <section className="pt-32 pb-20 bg-white min-h-screen">
+      <section className="pt-40 pb-24 bg-cream min-h-screen">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold font-heading text-navy mb-4">Yazı Bulunamadı</h1>
           <Link href="/blog" className="text-orange font-semibold">Blog&apos;a Dön</Link>
@@ -63,42 +65,65 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <section className="pt-32 pb-16 bg-gradient-to-br from-navy via-navy-light to-navy">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-white/60 hover:text-white font-body text-sm mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Blog&apos;a Dön
-          </Link>
-          <span className="inline-block bg-orange/20 text-orange text-xs font-bold font-body px-3 py-1 rounded-full mb-4">
-            {post.category}
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-bold font-heading text-white mb-6">
-            {post.title}
-          </h1>
-          <div className="flex items-center gap-4 text-white/50 text-sm font-body">
-            <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              {new Date(post.date).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
+      {/* Page Hero */}
+      <section className="relative pt-40 pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+        <div className="absolute inset-0 noise" />
+        <div className="absolute top-12 right-12 w-16 h-16 hidden lg:block">
+          <div className="absolute top-0 right-0 w-full h-px bg-orange/20" />
+          <div className="absolute top-0 right-0 h-full w-px bg-orange/20" />
+        </div>
+
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <Link href="/blog" className="inline-flex items-center gap-2 text-white/60 hover:text-white font-body text-sm mb-8 transition-colors">
+              <ArrowLeft className="w-4 h-4" /> Blog&apos;a Dön
+            </Link>
+            <span className="inline-block bg-orange/20 text-orange text-xs font-bold font-body px-3 py-1 rounded-full mb-4">
+              {post.category}
             </span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              {post.readTime} okuma
-            </span>
-          </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight mb-6">
+              {post.title}
+            </h1>
+            <div className="flex items-center gap-4 text-white/50 text-sm font-body">
+              <span className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                {new Date(post.date).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="w-4 h-4" />
+                {post.readTime} okuma
+              </span>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Article Content */}
+      <section className="py-28 bg-cream">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <article className="prose prose-lg max-w-none">
-            {post.content.map((para, i) => (
-              <p key={i} className="text-navy/70 font-body text-lg leading-relaxed mb-6">
-                {para}
-              </p>
-            ))}
-          </article>
+          <ScrollReveal>
+            <article className="prose prose-lg max-w-none">
+              {post.content.map((para, i) => (
+                <p key={i} className="text-navy/70 font-body text-lg leading-relaxed mb-6">
+                  {para}
+                </p>
+              ))}
+            </article>
+          </ScrollReveal>
 
-          <div className="mt-16 pt-8 border-t border-gray">
-            <div className="bg-gray-light rounded-2xl p-8 text-center">
+          <div className="arch-line-h mt-16 mb-16" />
+
+          <ScrollReveal delay={200}>
+            <div className="bg-white border border-navy/[0.06] rounded-2xl p-8 text-center">
               <h3 className="font-heading font-bold text-navy text-xl mb-3">
                 Bu konuda desteğe mi ihtiyacınız var?
               </h3>
@@ -112,7 +137,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 Ücretsiz Görüşme Al <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
