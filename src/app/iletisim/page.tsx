@@ -39,11 +39,11 @@ export default function IletisimPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="relative py-28 bg-cream overflow-hidden">
+      <section className="relative py-16 sm:py-28 bg-cream overflow-hidden">
         <div className="absolute inset-0 blueprint-dots opacity-50" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Left - Info */}
             <ScrollReveal variant="left">
               <div>

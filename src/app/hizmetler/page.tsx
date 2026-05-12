@@ -129,20 +129,20 @@ export default function HizmetlerPage() {
       </section>
 
       {/* Services Detail */}
-      <section className="py-28 bg-cream relative">
+      <section className="py-16 sm:py-28 bg-cream relative">
         <div className="absolute inset-0 gradient-mesh" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="space-y-28">
+          <div className="space-y-16 sm:space-y-28">
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
                   index % 2 === 1 ? "" : ""
                 }`}
               >
                 <ScrollReveal variant={index % 2 === 0 ? "left" : "right"} className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div>
-                    <span className="text-orange/30 font-heading font-bold text-7xl leading-none select-none">{service.num}</span>
+                    <span className="text-orange/30 font-heading font-bold text-5xl sm:text-7xl leading-none select-none">{service.num}</span>
                     <div className="bg-gradient-to-br from-orange/10 to-transparent w-14 h-14 rounded-xl flex items-center justify-center mt-4 mb-6">
                       <service.icon className="w-7 h-7 text-orange" />
                     </div>
@@ -190,7 +190,7 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-navy relative overflow-hidden noise">
+      <section className="py-16 sm:py-28 bg-navy relative overflow-hidden noise">
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "80px 80px" }} />
         <div className="absolute top-0 right-[20%] w-[400px] h-[400px] bg-orange/[0.05] rounded-full blur-[120px]" />
         <ScrollReveal>

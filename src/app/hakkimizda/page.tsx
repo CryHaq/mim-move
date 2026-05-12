@@ -72,7 +72,7 @@ export default function HakkimizdaPage() {
 
       {/* Stats */}
       <section className="bg-cream py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-32">
           <div className="bg-navy rounded-3xl p-10 lg:p-14 relative overflow-hidden noise">
             <div className="absolute top-0 right-0 w-48 h-48 bg-orange/10 rounded-full blur-[80px]" />
             <div className="absolute top-6 right-6 w-8 h-8">
@@ -94,11 +94,11 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Misyon & Vizyon */}
-      <section className="py-28 bg-cream relative">
+      <section className="py-16 sm:py-28 bg-cream relative">
         <div className="absolute inset-0 gradient-mesh" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <span className="inline-block text-orange font-semibold text-xs font-body tracking-[0.2em] uppercase mb-4">— Kim Biz?</span>
               <h2 className="text-4xl sm:text-5xl font-bold font-heading text-navy tracking-tight">Misyon & Vizyon</h2>
             </div>
@@ -136,11 +136,11 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Neden Biz */}
-      <section className="py-28 bg-white relative">
+      <section className="py-16 sm:py-28 bg-white relative">
         <div className="absolute inset-0 blueprint-dots" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <span className="inline-block text-orange font-semibold text-xs font-body tracking-[0.2em] uppercase mb-4">— Avantajlarımız</span>
               <h2 className="text-4xl sm:text-5xl font-bold font-heading text-navy tracking-tight">Neden Mim+Move?</h2>
             </div>
@@ -162,9 +162,9 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Müşteri Akışı */}
-      <section className="py-28 bg-cream relative">
+      <section className="py-16 sm:py-28 bg-cream relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div>
               <ScrollReveal variant="left">
                 <span className="inline-block text-orange font-semibold text-xs font-body tracking-[0.2em] uppercase mb-4">— Nasıl Çalışıyoruz?</span>
@@ -208,10 +208,10 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Referans Projeler */}
-      <section className="py-28 bg-white relative">
+      <section className="py-16 sm:py-28 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <span className="inline-block text-orange font-semibold text-xs font-body tracking-[0.2em] uppercase mb-4">— Portföyümüz</span>
               <h2 className="text-4xl sm:text-5xl font-bold font-heading text-navy tracking-tight">Referans Projelerimiz</h2>
             </div>
@@ -242,7 +242,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-navy relative overflow-hidden noise">
+      <section className="py-16 sm:py-28 bg-navy relative overflow-hidden noise">
         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "80px 80px" }} />
         <div className="absolute top-0 right-[20%] w-[400px] h-[400px] bg-orange/[0.05] rounded-full blur-[120px]" />
         <div className="absolute top-12 left-12 w-16 h-16 hidden lg:block">

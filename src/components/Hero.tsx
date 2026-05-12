@@ -73,10 +73,10 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-32 w-full min-h-screen flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-20 sm:pb-32 w-full min-h-screen flex flex-col justify-center">
           <div className="max-w-3xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-3 bg-white/[0.06] backdrop-blur-sm border border-white/[0.08] rounded-full px-5 py-2.5 mb-10">
+            <div className="inline-flex items-center gap-3 bg-white/[0.06] backdrop-blur-sm border border-white/[0.08] rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-6 sm:mb-10">
               <div className="relative">
                 <div className="w-2 h-2 bg-orange rounded-full" />
                 <div className="absolute inset-0 w-2 h-2 bg-orange rounded-full" style={{ animation: "pulse-ring 2s ease-out infinite" }} />
@@ -102,7 +102,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-white/50 font-body font-light leading-relaxed mb-12 max-w-xl">
+            <p className="text-base sm:text-lg lg:text-xl text-white/50 font-body font-light leading-relaxed mb-8 sm:mb-12 max-w-xl">
               Proje revizyonu, maliyet optimizasyonu, malzeme danışmanlığı ve
               düzenli toplantı sistemi ile her zaman yanınızdayız.
             </p>

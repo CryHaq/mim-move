@@ -90,10 +90,10 @@ export default function PaketlerPage() {
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-28 bg-cream relative">
+      <section className="py-16 sm:py-28 bg-cream relative">
         <div className="absolute inset-0 blueprint-dots" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch -mt-40">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch -mt-20 sm:-mt-40">
             {/* Başlangıç */}
             <ScrollReveal delay={1}>
               <div className="bg-white rounded-2xl p-8 lg:p-10 flex flex-col shadow-xl border border-navy/[0.06] hover:-translate-y-2 transition-all duration-500 h-full">
@@ -102,7 +102,7 @@ export default function PaketlerPage() {
                   Yeni başlayan firmalar veya küçük işletmeler için ideal.
                 </p>
                 <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-5xl font-bold font-heading text-navy tracking-tight">1.999</span>
+                  <span className="text-4xl sm:text-5xl font-bold font-heading text-navy tracking-tight">1.999</span>
                   <span className="text-base font-body text-navy/40">TL / ay</span>
                 </div>
                 <div className="w-full h-px bg-navy/[0.06] mb-8" />
@@ -134,7 +134,7 @@ export default function PaketlerPage() {
                   Düzenli proje desteği isteyen firmalar için.
                 </p>
                 <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-5xl font-bold font-heading text-white tracking-tight">4.999</span>
+                  <span className="text-4xl sm:text-5xl font-bold font-heading text-white tracking-tight">4.999</span>
                   <span className="text-base font-body text-white/40">TL / ay</span>
                 </div>
                 <div className="w-full h-px bg-white/10 mb-8" />
@@ -160,7 +160,7 @@ export default function PaketlerPage() {
                   Sanki firmanızda çalışan özel mimarınız.
                 </p>
                 <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-5xl font-bold font-heading text-navy tracking-tight">9.999</span>
+                  <span className="text-4xl sm:text-5xl font-bold font-heading text-navy tracking-tight">9.999</span>
                   <span className="text-base font-body text-navy/40">TL / ay</span>
                 </div>
                 <div className="w-full h-px bg-navy/[0.06] mb-8" />
@@ -235,11 +235,11 @@ export default function PaketlerPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-28 bg-white relative">
+      <section className="py-16 sm:py-28 bg-white relative">
         <div className="absolute inset-0 gradient-mesh" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 sm:mb-16">
               <span className="inline-block text-orange font-semibold text-xs font-body tracking-[0.2em] uppercase mb-4">— SSS</span>
               <h2 className="text-3xl sm:text-4xl font-bold font-heading text-navy tracking-tight">
                 Sık Sorulan Sorular

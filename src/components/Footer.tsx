@@ -35,7 +35,7 @@ export default function Footer() {
       {/* Top accent line */}
       <div className="h-px bg-gradient-to-r from-transparent via-orange/30 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 relative">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12">
           {/* Brand — wider column */}
           <div className="lg:col-span-4">
