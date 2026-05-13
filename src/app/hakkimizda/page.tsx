@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import ProcessTimeline from "@/components/ProcessTimeline";
@@ -41,7 +41,7 @@ export default function HakkimizdaPage() {
       {/* Page Hero */}
       <section className="relative pt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/about-hero.jpg" alt="Mimari" fill className="object-cover" />
+          <SafeImage src="/images/about-hero.jpg" alt="Mimari" fill sizes="100vw" priority className="object-cover" />
           <div className="absolute inset-0 bg-navy/90" />
         </div>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)", backgroundSize: "80px 80px" }} />
@@ -220,7 +220,7 @@ export default function HakkimizdaPage() {
             {projects.map((project, i) => (
               <ScrollReveal key={project.title} variant="scale" delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}>
                 <div className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer">
-                  <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <SafeImage src={project.image} alt={project.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
                     <div className="w-full h-full border border-white/[0.2] rounded-lg" />
                   </div>

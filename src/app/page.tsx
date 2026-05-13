@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
 import Marquee from "@/components/Marquee";
@@ -353,10 +353,11 @@ export default function Home() {
             {projects.map((project, i) => (
               <ScrollReveal key={project.title} variant="scale" delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}>
                 <div className="group relative rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer">
-                  <Image
+                  <SafeImage
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
@@ -417,10 +418,11 @@ export default function Home() {
               <ScrollReveal key={post.title} delay={Math.min(i + 1, 3) as 1 | 2 | 3}>
                 <article className="group rounded-2xl bg-white border border-navy/[0.06] overflow-hidden hover:shadow-xl hover:shadow-navy/[0.04] hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
                   <div className="h-52 relative overflow-hidden">
-                    <Image
+                    <SafeImage
                       src={post.image}
                       alt={post.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />

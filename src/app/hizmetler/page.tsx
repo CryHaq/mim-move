@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   FileSearch,
@@ -100,7 +100,7 @@ export default function HizmetlerPage() {
       {/* Page Hero */}
       <section className="relative pt-40 pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/services/architecture.jpg" alt="Mimari" fill className="object-cover" />
+          <SafeImage src="/images/services/architecture.jpg" alt="Mimari" fill sizes="100vw" priority className="object-cover" />
           <div className="absolute inset-0 bg-navy/90" />
         </div>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)", backgroundSize: "80px 80px" }} />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "İletişim",
@@ -157,86 +158,7 @@ export default function IletisimPage() {
                 </div>
 
                 <div className="relative">
-                  <h3 className="font-heading font-bold text-xl text-navy mb-2">
-                    İletişim Formu
-                  </h3>
-                  <p className="text-navy/50 font-body text-sm mb-8">
-                    Formu doldurun, size en kısa sürede dönüş yapalım.
-                  </p>
-                  <form className="space-y-5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                          Ad Soyad *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="Adınız Soyadınız"
-                          className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                          Telefon *
-                        </label>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="+90 5XX XXX XX XX"
-                          className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                        Firma Adı
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Firma adınız"
-                        className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                        E-posta
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="email@firma.com"
-                        className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                        Mesajınız *
-                      </label>
-                      <textarea
-                        rows={5}
-                        required
-                        placeholder="Projeniz hakkında kısaca bilgi verin..."
-                        className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all resize-none"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium font-body text-navy/70 mb-1.5">
-                        Proje Dosyası / Drive Linki (isteğe bağlı)
-                      </label>
-                      <input
-                        type="url"
-                        placeholder="Google Drive veya dosya linki"
-                        className="w-full px-4 py-3 rounded-xl border border-gray bg-white font-body text-sm text-navy placeholder:text-navy/30 focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full bg-orange hover:bg-orange-dark text-white font-semibold font-body py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-orange/25 hover:-translate-y-0.5 flex items-center justify-center gap-2"
-                    >
-                      <Send className="w-4 h-4" />
-                      Mesaj Gönder
-                    </button>
-                  </form>
+                  <ContactForm />
                 </div>
               </div>
             </ScrollReveal>
